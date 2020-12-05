@@ -80,6 +80,12 @@ class _simpleState extends State<simple> {
             }
                 , child: Text("Check Result",style: TextStyle(fontSize: 30,color: Colors.white),)),
           ),
+    Padding(
+    padding: const EdgeInsets.only(top: 10),
+    child: RaisedButton(onPressed: MainMenu,
+    child: Text('Exit Game'),
+    ),
+    ),
         ],
       ),
     );

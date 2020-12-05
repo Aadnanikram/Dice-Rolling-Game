@@ -48,7 +48,12 @@ class _main_pageState extends State<main_page> {
                     }
                         , child: Text("Hard",style: TextStyle(fontSize: 35,color: Colors.white),)),
                   ),
-
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10),
+                    child: RaisedButton(onPressed: MainMenu,
+                      child: Text('Exit Game'),
+                    ),
+                  ),
                 ],
               ),
 
