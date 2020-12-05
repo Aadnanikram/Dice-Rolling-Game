@@ -2,7 +2,12 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 import 'package:alert_dialog/alert_dialog.dart';
-import 'package:circular_profile_avatar/circular_profile_avatar.dart';
+import 'main_page.dart';
+int left_dice=1;
+int right_dice=1;
+int left_count=0;
+int right_count=0;
+String winer=null;
 
 class simple extends StatefulWidget {
   @override
@@ -17,8 +22,9 @@ class _simpleState extends State<simple> {
   String winer=null;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.grey,
+    return Scaffold(
+        color: Colors.grey,	      body: Container(
+        color: Colors.grey,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
