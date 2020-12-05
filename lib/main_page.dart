@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'simple.dart';
 import 'hard.dart';
+import 'aboutus.dart'
 class main_page extends StatefulWidget {
   @override
   _main_pageState createState() => _main_pageState();

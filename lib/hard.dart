@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'main_page.dart';
 import 'dart:math';
+int rold=1;
+bool appre=true;
 class hard extends StatefulWidget {
   @override
   _hardState createState() => _hardState();
@@ -19,11 +21,13 @@ class _hardState extends State<hard> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
+                decoration: BoxDecoration(
+                ),
                 height: 200,
                 width: 200,
                 child:FlatButton(onPressed: (){
                   setState(() {
-                    dice=Random().nextInt(5)+1;
+                    rold=Random().nextInt(5)+1;
                     appre=false;
                   });
                 },
@@ -44,19 +48,11 @@ class _hardState extends State<hard> {
         )
     );
   }
-  Widget disapre()
-  {  if(appre=false)
-  {
-    return Container(
-      color: Colors.grey,
-    );
-
-  }
-  else  if (appre=true)
-  {
-    return  Image(
-      image: AssetImage('images/dice$dice.jpg'),
-    );
+  void showimage()
+  {  if(appre=false)	  {
+    {	     Image(image: AssetImage('images/dice5.jpg')) ;
+    return Container(	  }
+    color: Colors.grey,	 }
 
   }
   }
