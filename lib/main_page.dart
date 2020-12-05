@@ -38,15 +38,15 @@ class _main_pageState extends State<main_page> {
                   Container(
                     decoration: BoxDecoration(
                       color: Colors.black26,
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(22),
                     ),
-                    margin: EdgeInsets.only(left: 30),
+                    margin: EdgeInsets.only(left: 35),
                     child: FlatButton(onPressed: (){
                       setState(() {
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>simple()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>hard()));
                       });
                     }
-                        , child: Text("Hard",style: TextStyle(fontSize: 30,color: Colors.white),)),
+                        , child: Text("Hard",style: TextStyle(fontSize: 35,color: Colors.white),)),
                   ),
 
                 ],
