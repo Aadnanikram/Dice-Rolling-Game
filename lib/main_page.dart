@@ -48,6 +48,19 @@ class _main_pageState extends State<main_page> {
                     }
                         , child: Text("Hard",style: TextStyle(fontSize: 35,color: Colors.white),)),
                   ),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.black26,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    margin: EdgeInsets.only(left: 200,top: 300),
+                    child: FlatButton(onPressed: (){
+                      setState(() {
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>about()));
+                      });
+                    }
+                        , child: Text("ABOUT US",style: TextStyle(fontSize: 30,color: Colors.black),)),
+                  ),
                   Padding(
                     padding: const EdgeInsets.only(top: 10),
                     child: RaisedButton(onPressed: MainMenu,
