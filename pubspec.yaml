@@ -34,6 +34,7 @@ dev_dependencies:
     sdk: flutter
 flutter_spinkit: "^4.1.2"
 circular_profile_avatar: "^1.0.8"
+alert_dialog: ^0.1.0
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
@@ -47,7 +48,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
    assets:
-     - images/profile.jpg
+      - images
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
