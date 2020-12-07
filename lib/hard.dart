@@ -1,59 +1,83 @@
 import 'package:flutter/material.dart';
 import 'main_page.dart';
 import 'dart:math';
-int rold=1;
-bool appre=true;
+import 'dart:io';
+import 'option_guss.dart';
+import 'dart:async';
+guss correct=guss();
 class hard extends StatefulWidget {
   @override
   _hardState createState() => _hardState();
 }
 
 class _hardState extends State<hard> {
-  int dice=1;
-  bool appre=false;
-
+  int rold=1;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: Colors.grey,
-        body: Center(
-          child:  Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                decoration: BoxDecoration(
+    return Scaffold(appBar: AppBar(title: Text("Hard Mode"),
+    ),
+        drawer: Drawer(
+          child: ListView(
+            children:<Widget> [
+              DrawerHeader(
+                padding: EdgeInsets.all(0),
+                child: Container(
+                  color: Colors.cyan,
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 100.0),
+                    child: Text('Dice Rolling', textAlign:TextAlign.left , style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Colors.white),),
+                  ),
                 ),
-                height: 200,
-                width: 200,
-                child:FlatButton(onPressed: (){
-                  setState(() {
-                    rold=Random().nextInt(5)+1;
-                    appre=false;
-                  });
-                },
-                  child:disapre(),
-                ) ,
               ),
+              ListTile(
+                title: Text('Dice Rolling', style: TextStyle(fontWeight: FontWeight.bold , fontSize: 20),),
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>main_page()));
+                },
+              ),
+              ListTile(
+                title: Text('Exit', style: TextStyle(fontWeight: FontWeight.bold , fontSize: 20),),
+                onTap: () {
+                  exit(0);
+                },
+              )
             ],
           ),
         ),
-        floatingActionButton:FloatingActionButton(
-          onPressed: (){
-            setState(() {
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>main_page()));
-            });
-          },
-          child: Icon(Icons.keyboard_return_rounded),
-          backgroundColor: Colors.black,
-        )
+      backgroundColor: Colors.cyan,
+      body: Center(
+        child:  Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+           children: [
+             Text("Dice Roll",style: TextStyle(fontSize: 50,color: Colors.black),),
+             SizedBox(
+               height: 70,
+             ),
+
+             Container(
+
+               decoration: BoxDecoration(
+               ),
+               height: 200,
+              width: 200,
+
+              child:FlatButton(onPressed: (){
+                setState(() {
+                  rold=Random().nextInt(5)+1;
+                  correct.get_correct(rold);
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>guss()));
+                });
+              },
+                child:Image(image: AssetImage('images/dice$rold.png')),
+              ) ,
+             ),
+           ],
+        ),
+      ),
     );
   }
-  void showimage()
-  {  if(appre=false)	  {
-    {	     Image(image: AssetImage('images/dice5.jpg')) ;
-    return Container(	  }
-    color: Colors.grey,	 }
+ }
 
-  }
-  }
-}
+
+
+

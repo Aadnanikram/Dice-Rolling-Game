@@ -24,19 +24,22 @@ class _MySplashScreenState extends State<MySplashScreen> {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          Text("SP17-BCS-029",style: TextStyle(fontSize: 30,color: Colors.white),) ,
-          SizedBox( height: 30.0),
-          Text("Muhammad Adnan Ikram",style: TextStyle(fontSize: 30,color: Colors.white),) ,
-          SizedBox( height: 30.0),
-          CircularProfileAvatar(
+          SizedBox( height: 150.0),
 
-            null,child: Image(
+          Text("Muhammad Adnan Ikram",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30,color: Colors.white),) ,
+
+          SizedBox( height: 10.0),
+          Text("SP17-BCS-029",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30,color: Colors.white),) ,
+          SizedBox( height: 10.0),
+        CircularProfileAvatar(
+        null,child: Image(
             image: AssetImage('images/profile.jpg'),
-          ),
-          ),
+        ),
+           ),
           SizedBox( height: 30.0),
           SpinKitRipple(color: Colors.redAccent, size: 150.0, borderWidth: 10.0,),
         ],
+
       ),
     );
   }
